@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        // Please write your code here.
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt(), b=sc.nextInt(), c=sc.nextInt();
+        int sum = a + b + c;
+        System.out.println(sum);
+        System.out.println(sum/3);
+        System.out.println(sum - (sum/3));
+        
+
+    }
+}
