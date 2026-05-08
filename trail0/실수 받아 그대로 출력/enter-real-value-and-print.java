@@ -5,6 +5,6 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         double n = sc.nextDouble();
-        System.out.printf("%.2f", Math.round(n * 100) / 100.0);
+        System.out.printf("%.2f",n);
     }
 }
