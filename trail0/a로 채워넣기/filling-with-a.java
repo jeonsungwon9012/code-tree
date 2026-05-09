@@ -1,19 +1,13 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        int len = str.length();
-
-        String result =
-                str.substring(0, 1)
-                + "a"
-                + str.substring(2, len - 2)
-                + "a"
-                + str.substring(len - 1);
-
-        System.out.println(result);
+        String s = sc.next();
+        char[] arr = s.toCharArray();
+        arr[1] = 'a';
+        arr[arr.length - 2] = 'a';
+        System.out.println(String.valueOf(arr));
     }
 }
+
