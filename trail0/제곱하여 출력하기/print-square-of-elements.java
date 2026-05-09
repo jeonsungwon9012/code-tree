@@ -1,14 +1,25 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        // Please write your code here.
+
         Scanner sc = new Scanner(System.in);
+
         int n = sc.nextInt();
+
         int[] arr = new int[n];
-        for(int i = 0; i < n; i++){
-            int temp = sc.nextInt();
-            arr[i] = temp * temp;
-            System.out.print(arr[i]+" ");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            arr[i] *= arr[i];
         }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int num : arr) {
+            sb.append(num).append(" ");
+        }
+
+        System.out.println(sb);
     }
 }
