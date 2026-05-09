@@ -1,20 +1,24 @@
 import java.io.*;
+
 public class Main {
     public static void main(String[] args) throws IOException {
-        // Please write your code here.
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        BufferedReader br =
+                new BufferedReader(new InputStreamReader(System.in));
+
         String[] str = br.readLine().split(" ");
-        if(str[0].length() < str[1].length()){
-            System.out.print(str[1]+" "+str[1].length());
-        }
-        else if(str[0].length() > str[1].length()){
-            System.out.print(str[0]+" "+str[0].length());
-        }
-        else{
-            System.out.print("same");
-        }
 
-        
+        int len1 = str[0].length();
+        int len2 = str[1].length();
 
+        if (len1 == len2) {
+            System.out.println("same");
+        }
+        else {
+            String longer = len1 > len2 ? str[0] : str[1];
+            int length = Math.max(len1, len2);
+
+            System.out.println(longer + " " + length);
+        }
     }
 }
