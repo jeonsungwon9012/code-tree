@@ -1,19 +1,16 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        // Please write your code here.
-        Scanner sc = new Scanner(System.in);
-        int y = sc.nextInt();
-        if(y % 4 == 0){
-            if(y%100 ==0 && y%400 != 0){
-                System.out.println("false");
-                return;
-            }
-            System.out.println("true");
-        }
-        else{
-            System.out.println("false");
-        }
 
+        Scanner sc = new Scanner(System.in);
+
+        int y = sc.nextInt();
+
+        boolean leap =
+                (y % 4 == 0 && y % 100 != 0)
+                || (y % 400 == 0);
+
+        System.out.println(leap);
     }
 }
